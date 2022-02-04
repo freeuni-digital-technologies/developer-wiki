@@ -1,0 +1,52 @@
+remote_theme: pmarsceill/just-the-docs
+
+
+title: wiki 
+description: შესავალი ციფრულ ტექნოლოგიებში, თბილისის თავისუფალი უნივერსიტეტი
+
+baseurl: "wiki"
+url: "https://freeuni-digital-technologies.github.io" 
+
+exclude: [] 
+
+search_enabled: true
+search:
+  heading_level: 4
+  previews: 3 
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+heading_anchors: true
+
+
+# aux_links: 
+aux_links_new_tab: true
+
+nav_sort: case_insensitive
+
+back_to_top: true
+back_to_top_text: "გვერდის დასაწყისში დაბრუნება"
+
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "ამ გვერდის კოდი"
+gh_edit_repository: "https://github.com/freeuni-digital-technologies/wiki" # the github URL for your repo
+gh_edit_branch: "master" 
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+
+color_scheme: nil
+
+plugins:
+  - jekyll-seo-tag
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
