@@ -64,4 +64,5 @@ mocha/chai-ს გამოყენებით დავალებისთ�
 
 
 ### კარელის ტესტების მაგალითები
-<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Ffreeuni-digital-technologies%2Fsubject-modules%2Fblob%2Fmain%2Fdt-homeworks%2Fhw1%2Fhw1tester.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on&fetchFromJsDelivr=on"></script>
+<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Ffreeuni-digital-technologies%2Fsubject-modules%2Fblob%2Fmain%2Fdt-homeworks%2Fhw1%2Fhw1tester.js&style=github&showBorder=on&showFileMeta=on&showCopy=on&fetchFromJsDelivr=on"></script>
+
