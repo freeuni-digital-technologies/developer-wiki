@@ -21,7 +21,7 @@ title: მთავარი გვერდი
 ყველანაირი რესურსი გამოქვეყნებულია საიტზე და დამატებით დაჯგუფებულია კვირების მიხედვით
 .  ასევე აქ არის ნებისმიერი ინფორმაცია რაც შეიძლება სტუდენტს აინტერესებდეს
 
-http://freeuni-digital-technologies.github.io
+<https://freeuni-digital-technologies.github.io>
 
 - ფაილები
 - github pages
@@ -46,7 +46,7 @@ http://freeuni-digital-technologies.github.io
 
 
 ### ვებ დავალებების ინტერფეისი
-mocha/chai-ს გამოყენებით დავალებისთვის იწერება ტესტები, რომელიც ფაილის გახსნისას ჩანს ნაბიჯ-ნაბიჯ (ტესტების დაწერისას შეიძლება განსაზღვრა)
+mocha/chai-ს გამოყენებით დავალებისთვის იწერება ტესტები, რომელიც ფაილის გახსნისას ჩანს ნაბიჯ-ნაბიჯ (ტესტების დაწერისას შეიძლება განსაზღვრა). [სრული კოდი](https://github.com/freeuni-digital-technologies/webHwInterface/blob/master/homeworks/hw6/tests.js)
 
 ```js
 describe(`მინი კალკულატორი`, () => {
