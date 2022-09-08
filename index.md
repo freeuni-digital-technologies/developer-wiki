@@ -1,12 +1,12 @@
 ---
 title: მთავარი გვერდი
-nav_order: 1
+nav\_order: 1
 ---
 
 ამ საიტზე მოცემულია საგნის მთავარი კომპონენტები, და ზედაპირული მაგალითები
 
 
-- TOC 
+- TOC
 {:toc}
 
 ## ლექციები/სემინარები
@@ -18,15 +18,14 @@ nav_order: 1
 - გუნდური პროექტი: გუნდის მიერ არჩეულ თემაზე ფუნქციონალის, დიზაინის შექმნა. Development reportის გაკეთება.
 
 ### ტექნოლოგიები
-ყველანაირი რესურსი გამოქვეყნებულია საიტზე და დამატებით დაჯგუფებულია კვირების მიხედვით
-.  ასევე აქ არის ნებისმიერი ინფორმაცია რაც შეიძლება სტუდენტს აინტერესებდეს
+ყველანაირი რესურსი გამოქვეყნებულია საიტზე და დამატებით დაჯგუფებულია კვირების მიხედვით.  ასევე აქ არის ნებისმიერი ინფორმაცია რაც შეიძლება სტუდენტს აინტერესებდეს
 
-<https://freeuni-digital-technologies.github.io>
+[https://freeuni-digital-technologies.github.io][1]
 
 - ფაილები
 - github pages
 - jekyll
-- `in progress` - markdown ფაილებისგან ასევე ავტომატურად გენერირდება პრეზენტაციის სლაიდები ([ასეთ ფორმატში](https://revealjs.com/demo/))
+- `in progress` - markdown ფაილებისგან ასევე ავტომატურად გენერირდება პრეზენტაციის სლაიდები ([ასეთ ფორმატში][2])
 
 
 ## დავალებების შესწორება
@@ -35,18 +34,12 @@ nav_order: 1
 - ფორმატის შეუსაბამობის შემთხვევაში კონკრეტულად რა პრობლემაა და როგორ გამოასწორონ. ამის შემდეგ შეუძლიათ თავიდან ატვირთონ დავალება
 - თუ ფორმატი სწორია, უგზავნის შემსწორებელი ტესტების შედეგებს
 
-<https://github.com/freeuni-digital-technologies/subject-modules/>
-
-### ტექნოლოგიები
-- typescript
-- google apis: classroom, drive
-- tdd
-- daemon
-- `in progress` ci/cd server
+[https://github.com/freeuni-digital-technologies/subject-modules/][3]
 
 
-## ვებ დავალებების ინტერფეისი
-mocha/chai-ს გამოყენებით დავალებისთვის იწერება ტესტები, რომელიც ფაილის გახსნისას ჩანს ნაბიჯ-ნაბიჯ (ტესტების დაწერისას შეიძლება განსაზღვრა). [სრული კოდი](https://github.com/freeuni-digital-technologies/webHwInterface/blob/master/homeworks/hw6/tests.js)
+
+## JSPilot: ვებ დავალებების ინტერფეისი
+mocha/chai-ს გამოყენებით დავალებისთვის იწერება ტესტები, რომელიც ფაილის გახსნისას ჩანს ნაბიჯ-ნაბიჯ (ტესტების დაწერისას შეიძლება განსაზღვრა). [სრული კოდი][4]
 
 ```js
 describe(`მინი კალკულატორი`, () => {
@@ -72,7 +65,7 @@ describe(`მინი კალკულატორი`, () => {
 
 ეს კოდი სტუდენტებისთვის შემდეგნაირად გამოჩნდებოდა:
 
-![](./webhw_example.png)
+![][image-1]
 
 სანამ მეორე ტესტში დაწერილი პირობა არ შესრულდება, შემდეგ ნაბიჯზე  ვერ გადავლენ (კალკულატორის ფუნქციონალი)
 
@@ -88,3 +81,10 @@ describe(`მინი კალკულატორი`, () => {
 ## კარელის ტესტების მაგალითი
 <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Ffreeuni-digital-technologies%2Fsubject-modules%2Fblob%2Fmain%2Fdt-homeworks%2Fhw1%2Fhw1tester.js&style=github&showBorder=on&showFileMeta=on&showCopy=on&fetchFromJsDelivr=on"></script>
 
+
+[1]:	https://freeuni-digital-technologies.github.io
+[2]:	https://revealjs.com/demo/
+[3]:	https://github.com/freeuni-digital-technologies/subject-modules/
+[4]:	https://github.com/freeuni-digital-technologies/webHwInterface/blob/master/homeworks/hw6/tests.js
+
+[image-1]:	./webhw_example.png
