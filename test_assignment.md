@@ -1,6 +1,6 @@
 ---
 title: ასისტენტის სატესტო დავალება
-nav\_order: 3
+nav_order: 3
 ---
 # ასისტენტის სატესტო დავალება
 
@@ -77,34 +77,34 @@ nav\_order: 3
 #### 1. refactoring
 მე-5 დავალების მე-2 გვერდზე არის დავალება ბევრ ელემენტში პაროლის პოვნის. იპოვე 
 
-\<details\>
-\<summary\>პასუხი\</summary\>
+<details>
+<summary>პასუხი</summary>
 `setupGuessingPassword()`
-\</details\>
+</details>
 - რამეს თუ შეცვლიდი ამ ფუნქციაში? (და იმ ფუნქციებში, რომელსაც იყენებს).
 -  თუ შეძლებ, გააკეთე რეფაქტორინგი.
 
 #### 2. bugfix
 გაუშვი (yarn start) მე-5 დავალება, გადადი მეორე გვერდზე. გამორთე და გაუშვი მე-6 დავალება. ისიც მეორე გვერდიდან იწყებს. შეგიძლია გაიაზრო, რის გამო?
 
-\<details\>
-\<summary\>პასუხი\</summary\>
+<details>
+<summary>პასუხი</summary>
 localStorage ში ინახება CONFIG.currentStep, რომელიც იგივე რჩება, თუ დავალებები ერთ ფოლდერშია.
-\</details\>
+</details>
 
 როგორ შეიძლება ეს გამოსწორდეს?
 
-\<details\>
-\<summary\>პასუხი:\</summary\>
+<details>
+<summary>პასუხი:</summary>
 Config-ის კლასის შექმნისას (main.js ფაილში) შეგვიძლია მას დავალების სახელი გადავაწოდოთ
-\</details\>
+</details>
 
 რაში გამოვიყენოთ მიღებული ინფორმაცია?
 
-\<details\>
-\<summary\>პასუხი:\</summary\>
+<details>
+<summary>პასუხი:</summary>
 Config-ის კლასის შექმნისას წავიკითხოთ localStorage-დან დავალების სახელი. თუ არ ემთხვევა გადმოწოდებულს, 1) წავშალოთ localStorage 2) დავარეფრეშოთ გვერდი
-\</details\>
+</details>
 
 
 #### 3. refactoring
