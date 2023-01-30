@@ -1,6 +1,6 @@
 docs_dir: content
 site_name: Digital Technologies Wiki
-site_url: https://freeuni-digital-technologies.github.io/wiki
+site_url: https://freeuni-digital-technologies.github.io/developer-wiki
 theme:
   name: material
   palette:
