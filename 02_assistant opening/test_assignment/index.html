@@ -1,0 +1,871 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://freeuni-digital-technologies.github.io/developer-wiki/02_assistant%20opening/test_assignment/">
+      
+      
+        <link rel="prev" href="../assistant/">
+      
+      
+        <link rel="next" href="../../03_for%20assistants/development_workflow/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+    
+    
+      
+        <title>ასისტენტის სატესტო დავალება - Digital Technologies Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Digital Technologies Wiki" class="md-header__button md-logo" aria-label="Digital Technologies Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Digital Technologies Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ასისტენტის სატესტო დავალება
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.768 3.96v.001l-.002-.005a9.08 9.08 0 0 0-.218-.779c-.13-.394.21-.8.602-.67.29.096.575.205.855.328l.01.005A10.002 10.002 0 0 1 12 22a10.002 10.002 0 0 1-9.162-5.985l-.004-.01a9.722 9.722 0 0 1-.329-.855c-.13-.392.277-.732.67-.602.257.084.517.157.78.218l.004.002A9 9 0 0 0 14.999 6a9.09 9.09 0 0 0-.231-2.04ZM16.5 6c0 5.799-4.701 10.5-10.5 10.5-.426 0-.847-.026-1.26-.075A8.5 8.5 0 1 0 16.425 4.74c.05.413.075.833.075 1.259Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 19a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 1 0 0 11Zm-5.657.157a.75.75 0 0 1 0 1.06l-1.768 1.768a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.767-1.768a.75.75 0 0 1 1.061 0ZM3.515 3.515a.75.75 0 0 1 1.06 0l1.768 1.768a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L3.515 4.575a.75.75 0 0 1 0-1.06ZM12 0a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 12 0ZM4 12a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 4 12Zm8 8a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5A.75.75 0 0 1 12 20Zm12-8a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 24 12Zm-6.343 5.657a.75.75 0 0 1 1.06 0l1.768 1.768a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.768-1.767a.75.75 0 0 1 0-1.061Zm2.828-14.142a.75.75 0 0 1 0 1.06l-1.768 1.768a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l1.767-1.768a.75.75 0 0 1 1.061 0Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Digital Technologies Wiki" class="md-nav__button md-logo" aria-label="Digital Technologies Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Digital Technologies Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Wiki - შესავალი ციფრულ ტექნოლოგიებში
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          01 about
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          01 about
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_about/01_structure/" class="md-nav__link">
+        საგნის სტრუქტურა
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_about/02_philosophy/" class="md-nav__link">
+        კურსის ღირებულებები
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          02 assistant opening
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          02 assistant opening
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assistant/" class="md-nav__link">
+        ასისტენტ დეველოპერის ვაკანსია
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ასისტენტის სატესტო დავალება
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ასისტენტის სატესტო დავალება
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ინფორმაცია
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#self-evaluation" class="md-nav__link">
+    self evaluation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development" class="md-nav__link">
+    Development დავალება
+  </a>
+  
+    <nav class="md-nav" aria-label="Development დავალება">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-10" class="md-nav__link">
+    ნაწილი 1. setup - 10 წუთი
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-10" class="md-nav__link">
+    ნაწილი 2. ორიენტაცია - 10 წთ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1" class="md-nav__link">
+    ნაწილი 3. დავალებები - 1  სთ
+  </a>
+  
+    <nav class="md-nav" aria-label="ნაწილი 3. დავალებები - 1  სთ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-refactoring" class="md-nav__link">
+    1. refactoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bugfix" class="md-nav__link">
+    2. bugfix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-refactoring" class="md-nav__link">
+    3. refactoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-feature" class="md-nav__link">
+    4. feature
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    შედეგის გამოგზავნა
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          03 for assistants
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          03 for assistants
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_for%20assistants/development_workflow/" class="md-nav__link">
+        Development Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_for%20assistants/resources/" class="md-nav__link">
+        რესურსები
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_for%20assistants/typescript_project_setup/" class="md-nav__link">
+        Typescript პროექტის გამართვა
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          04 other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          04 other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_other/04_guide/" class="md-nav__link">
+        ლექტორის გზამკვლევი
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ინფორმაცია
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#self-evaluation" class="md-nav__link">
+    self evaluation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development" class="md-nav__link">
+    Development დავალება
+  </a>
+  
+    <nav class="md-nav" aria-label="Development დავალება">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-10" class="md-nav__link">
+    ნაწილი 1. setup - 10 წუთი
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-10" class="md-nav__link">
+    ნაწილი 2. ორიენტაცია - 10 წთ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1" class="md-nav__link">
+    ნაწილი 3. დავალებები - 1  სთ
+  </a>
+  
+    <nav class="md-nav" aria-label="ნაწილი 3. დავალებები - 1  სთ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-refactoring" class="md-nav__link">
+    1. refactoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bugfix" class="md-nav__link">
+    2. bugfix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-refactoring" class="md-nav__link">
+    3. refactoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-feature" class="md-nav__link">
+    4. feature
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    შედეგის გამოგზავნა
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">ასისტენტის სატესტო დავალება</h1>
+<p>2023 შემოდგომა</p>
+<h2 id="_2">ინფორმაცია</h2>
+<ul>
+<li>ასისტენტის დავალებები მეტწილად იქნება <strong>დეველოპმენტი</strong>- საგნის სამენეჯმენტო პროგრამებისთვის ახალი ფუნქციების დამატება. სტუდენტებთან კონსულტაცია იქნება იშვიათად. თუ ჯერ არ გინახავს, გაგრძელებამდე აუცილებლად გაეცანი Development wiki-ს.</li>
+<li>მუშაობისთვის მიიღებ <strong>5 ზოგად კრედიტს</strong></li>
+<li>ყოველ კვირა გვექნება ერთი 1 საათიანი შეხვედრა (ზოგჯერ კამპუსში ან სადმე ქალაქში, ზოგჯერ ონლაინ) და ერთი ნახევარ საათიანი შეხვედრა (ონლაინ). დროები იქნება რეგულარული (ყოველ კვირა ერთ დროს, ზოგჯერ გამონაკლისით).  შეხვედრა უნდა შეგეძლოს<strong>სამუშაო ან საღამოს საათებში</strong>არ იგულისხმება ნებისმიერი დღე, უბრალოდ შესაძლებელი უნდა იყოს ამის წინასწარ შეთანხმება. თუ სამსახურის დატვირთვა ამის საშუალებას ვერ მოგცემს, პროდუქტიულად ვერ ვიმუშავებთ.</li>
+<li>დატვირთვა (შეხვედრების ჩათვლით) არის კვირაში 5-6 საათი</li>
+</ul>
+<p>ამ დავალების მიზანი <strong>არ არის</strong> არსებული გამოცდილების მიხედვით სტუდენტების შეფასება. იდეალურ შემთხვევაში ავარჩევ ერთ გამოცდილ და ერთ ნაკლებად გამოცდილ სტუდენტს, რადგან ასეთი კომბინაციით გაცილებით უფრო საინტერესო და პროდუქტიულია ერთად მუშაობა.</p>
+<h2 id="workflow">Workflow</h2>
+<h3 id="self-evaluation">self evaluation</h3>
+<p>გთხოვ, თითოეულ ნაწილზე შენს მიერ შექმნილ google doc-ში ცალ-ცალკე ჩაინიშნო შემდეგი ინფორმაცია თითოეულ ნაბიჯზე
+- რა დრო დაუთმე
+- რა გააკეთე
+    - რა გამოგივიდა
+    - რა სცადე და არ გამოგივიდა</p>
+<p>ამ დოკუმენტში დაწერე რომელი დღეების რა დროებში და შეგეძლება ხოლმე ყოველკვირეული შეხვედრები (1 სთ პირადად და 30 წთ ონლაინ).</p>
+<h2 id="development">Development დავალება</h2>
+<p>დღეს გავეცნობით jspilot-ის მოდულს. იგი გამოიყენება დავალებების გასაკეთებლად. დავალების ტესტები განსაზღვრულია ფართოდ გამოყენებული სატესტო framework, mocha-ს გამოყენებით. დავალების დაწყებამდე, გაეცანი მის სინტაქსს: <a href="https://mochajs.org/#getting-started">https://mochajs.org/#getting-started</a></p>
+<p>თუ გამოცდილება არ გაქვს, js/ts სინტაქსი განსაკუთრებულად არ განსხვავდება სხვა OOP ენებისგან. წაკითხვით ზოგადი წარმოდგენის შექმნას შეძლებ, კოდის დაწერისას კი შეგიძლია ზოგგან სიტყვიერად ახსნა რას გააკეთებდი. </p>
+<h3 id="1-setup-10">ნაწილი 1. setup - 10 წუთი</h3>
+<p>ინსტალაციის ინსტრუქცია წერია <a href="https://github.com/freeuni-digital-technologies/jspilot">jspilot</a>-ის github-ზე. გაუშვი მე-5 და მე-6 დავალება, გახსენი ბრაუზერში.</p>
+<p>თუ ვერ შეძლებ გარემოს გამართვას ამ დროში, მაინც გადადი შემდეგ ნაბიჯზე. კოდის ფაილების წაკითხვით მაინც ბევრ ინფორმაციას მიიღებ,</p>
+<p>თუ 5-10 წუთში ვერ გამართავ გარემოს, google doc-ში დაწერე მოკლე შეჯამება და გადადი შემდეგ ნაბიჯზე. დავალების მზა ფაილების გადმოწერა (რომ ნახო ხოლმე კოდი როგორ მუშაობს) შეგიძლია აქ:
+- <a href="http://freeuni-digital-technologies.github.io/webHwInterface/hw5/hw5.zip">მე-5 დავალება</a>
+- <a href="http://freeuni-digital-technologies.github.io/webHwInterface/hw5/hw5.zip">მე-6 დავალება</a></p>
+<h3 id="2-10">ნაწილი 2. ორიენტაცია - 10 წთ</h3>
+<p>ტესტები განსაზღვრულია თითოეული დავალების (homeworks/hwN) tests.js ფაილში.</p>
+<ul>
+<li>describe() ფუნქცია არის ერთი test suite -ში. ორი არგუმენტი აქვს, სათაური და callback. callback-ში განსაზღვრულია test case-ები</li>
+<li>it() არის ერთი test case. ასევე ორი არგუმენტი აქვს, აღწერა და callback, სადაც უშუალოდ კოდი წერია. ზოგჯერ ის არაფერს ამოწმებს (მხოლოდ ტექსტს აჩვენებს), რა შემთხვევაშიც callback არ გადაეწოდება.</li>
+<li>დავალების სხვადასხვა "გვერდები" იმპლემენტირებულია CONFIG.isStep() ფუნქციის გამოყენებით<ul>
+<li>localStorage-ში ვინახავ მენამდენე გვერდზეა სტუდენტი (config.currentStep. გახსენი კონსოლი დავალების გვერდზე და შეძლებ ამ მნიშვნელობის წაკითხვას)</li>
+<li>შემდეგი/წინა ღილაკები ამ მნიშვნელობას ზრდის/ამცირებს</li>
+<li>დავალების გვერდები ასეა განსაზღვრული:
+    <div class="highlight"><pre><span></span><code><span class="nx">CONFIG</span><span class="p">.</span><span class="nx">isStep</span><span class="p">(</span><span class="nx">steps</span><span class="p">.</span><span class="nx">introduction</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">describe</span><span class="p">(</span><span class="s2">&quot;heading&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// code with tests</span>
+<span class="p">})</span>
+<span class="c1">// როდესაც isStep() False-ს აბრუნებს, describe() ფუნქციას არ გამოიძახებს.</span>
+<span class="c1">// ზემოთა კოდი ეკვივალენტურია ამის:</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">CONFIG</span><span class="p">.</span><span class="nx">isStep</span><span class="p">(</span><span class="nx">steps</span><span class="p">.</span><span class="nx">intruduction</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">describe</span><span class="p">(</span><span class="s2">&quot;heading&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1">ნაწილი 3. დავალებები - 1  სთ</h3>
+<p>ქვემოთ ჩამოთვლილია რამდენიმე დავალება. მუშა კოდის დაწერა პრიორიტეტებში ბოლო ადგილზეა, ჩემთვის უფრო მნიშვნელოვანი ისაა, რამდენად გაიგებ პირობას და რა იდეები მოგივა ამოხსნაზე. გირჩევ მათზე იმუშაო იტერატიულად:
+1. წაიკითხო ყველას პირობა, გადახედო ფაილებს
+2. თითოეულისთვის google doc-ში დაწერე
+    1. რა არის გაუგებარი
+    2. ამოხსნის ზოგადი სტრატეგია
+    3. მინიშნება გამოიყენე თუ არა
+3. თუ ამის შემდეგ დრო კიდევ დაგრჩება, კოდის წერა დაიწყე იმ დავალებით, რომელსაც გგონია რომ ყველაზე მალე და მარტივად გააკეთებ. რომელიმე დავალებაზე თუ ამოხსნის მიტოვება მოგიწია, არც ეგაა პრობლემა, პროგრესიც ბევრს ნიშნავს.
+4. თითოეული დავალების მიტოვების/დასრულების შემდეგ google doc-ში დაწერე მოკლე შეჯამება (რა დრო დახარჯე/რა გამოგივიდა)</p>
+<p>რამდენიმე სახის დავალება იმიტომაა, რომ გქონდეს არჩევანი, და არა იმიტომ, რომ ყველა გააკეთო/სცადო.</p>
+<h4 id="1-refactoring">1. refactoring</h4>
+<p>მე-5 დავალების მე-2 გვერდზე არის დავალება ბევრ ელემენტში პაროლის პოვნის. იპოვე </p>
+<details>
+<summary>პასუხი</summary>
+`setupGuessingPassword()`
+</details>
+<ul>
+<li>რამეს თუ შეცვლიდი ამ ფუნქციაში? (და იმ ფუნქციებში, რომელსაც იყენებს).</li>
+<li>თუ შეძლებ, გააკეთე რეფაქტორინგი.</li>
+</ul>
+<h4 id="2-bugfix">2. bugfix</h4>
+<p>გაუშვი (yarn start) მე-5 დავალება, გადადი მეორე გვერდზე. გამორთე და გაუშვი მე-6 დავალება. ისიც მეორე გვერდიდან იწყებს. შეგიძლია გაიაზრო, რის გამო?</p>
+<details>
+<summary>პასუხი</summary>
+localStorage ში ინახება CONFIG.currentStep, რომელიც იგივე რჩება, თუ დავალებები ერთ ფოლდერშია.
+</details>
+
+<p>როგორ შეიძლება ეს გამოსწორდეს?</p>
+<details>
+<summary>პასუხი:</summary>
+Config-ის კლასის შექმნისას (main.js ფაილში) შეგვიძლია მას დავალების სახელი გადავაწოდოთ
+</details>
+
+<p>რაში გამოვიყენოთ მიღებული ინფორმაცია?</p>
+<details>
+<summary>პასუხი:</summary>
+Config-ის კლასის შექმნისას წავიკითხოთ localStorage-დან დავალების სახელი. თუ არ ემთხვევა გადმოწოდებულს, 1) წავშალოთ localStorage 2) დავარეფრეშოთ გვერდი
+</details>
+
+<h4 id="3-refactoring">3. refactoring</h4>
+<p>ჩამოწერე src/ ფოლდერის ფაილებში suggestion-ები:
+- ინტერფეისის/ფუნქციის სახელების
+- ფუნქციების განაწილების (ინტერფეისების გაერთიანება ან დაშლა, რომ იდეურად უფრო ინტუიტიური იყოს)</p>
+<h4 id="4-feature">4. feature</h4>
+<p>შეგიძლია jspilot-ში დაამატო ახალი დავალება? დავუშვათ hw6, ორი გვერდით (describe სათაურში იყოს მხოლოდ გვერდის ნომერი), რომელშიც თითო ტესტი იქნება (it-ს ტექსტში იყოს უბრალოდ სიტყვა "ტესტი").</p>
+<h2 id="_3">შედეგის გამოგზავნა</h2>
+<p>პარასკევამდე/შაბათ დილამდე გამომიგზავნე google doc და (არსებობის შემთხვევაში) მოდიფიცირებული ფაილები mail-ზე.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      
+    
+  </body>
+</html>

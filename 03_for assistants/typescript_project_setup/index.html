@@ -1,0 +1,949 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://freeuni-digital-technologies.github.io/developer-wiki/03_for%20assistants/typescript_project_setup/">
+      
+      
+        <link rel="prev" href="../resources/">
+      
+      
+        <link rel="next" href="../../04_other/04_guide/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+    
+    
+      
+        <title>Typescript პროექტის გამართვა - Digital Technologies Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#typescript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Digital Technologies Wiki" class="md-header__button md-logo" aria-label="Digital Technologies Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Digital Technologies Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Typescript პროექტის გამართვა
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.768 3.96v.001l-.002-.005a9.08 9.08 0 0 0-.218-.779c-.13-.394.21-.8.602-.67.29.096.575.205.855.328l.01.005A10.002 10.002 0 0 1 12 22a10.002 10.002 0 0 1-9.162-5.985l-.004-.01a9.722 9.722 0 0 1-.329-.855c-.13-.392.277-.732.67-.602.257.084.517.157.78.218l.004.002A9 9 0 0 0 14.999 6a9.09 9.09 0 0 0-.231-2.04ZM16.5 6c0 5.799-4.701 10.5-10.5 10.5-.426 0-.847-.026-1.26-.075A8.5 8.5 0 1 0 16.425 4.74c.05.413.075.833.075 1.259Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 19a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 1 0 0 11Zm-5.657.157a.75.75 0 0 1 0 1.06l-1.768 1.768a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.767-1.768a.75.75 0 0 1 1.061 0ZM3.515 3.515a.75.75 0 0 1 1.06 0l1.768 1.768a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L3.515 4.575a.75.75 0 0 1 0-1.06ZM12 0a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 12 0ZM4 12a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 4 12Zm8 8a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5A.75.75 0 0 1 12 20Zm12-8a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 24 12Zm-6.343 5.657a.75.75 0 0 1 1.06 0l1.768 1.768a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.768-1.767a.75.75 0 0 1 0-1.061Zm2.828-14.142a.75.75 0 0 1 0 1.06l-1.768 1.768a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l1.767-1.768a.75.75 0 0 1 1.061 0Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Digital Technologies Wiki" class="md-nav__button md-logo" aria-label="Digital Technologies Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Digital Technologies Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Wiki - შესავალი ციფრულ ტექნოლოგიებში
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          01 about
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          01 about
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_about/01_structure/" class="md-nav__link">
+        საგნის სტრუქტურა
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_about/02_philosophy/" class="md-nav__link">
+        კურსის ღირებულებები
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          02 assistant opening
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          02 assistant opening
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_assistant%20opening/assistant/" class="md-nav__link">
+        ასისტენტ დეველოპერის ვაკანსია
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_assistant%20opening/test_assignment/" class="md-nav__link">
+        ასისტენტის სატესტო დავალება
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          03 for assistants
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          03 for assistants
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development_workflow/" class="md-nav__link">
+        Development Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        რესურსები
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Typescript პროექტის გამართვა
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Typescript პროექტის გამართვა
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commit-hooks" class="md-nav__link">
+    Commit hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Commit hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#githookspre-commit" class="md-nav__link">
+    .githooks/pre-commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#githooksprepare-commit-msg" class="md-nav__link">
+    .githooks/prepare-commit-msg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-hooks" class="md-nav__link">
+    setup hooks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-code-coverage" class="md-nav__link">
+    Adding code coverage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cicd" class="md-nav__link">
+    CI/CD
+  </a>
+  
+    <nav class="md-nav" aria-label="CI/CD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-on-pull-request" class="md-nav__link">
+    test on pull request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ლოკალურად გატესტვა
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ბიბლიოთეკის გამოქვეყნება
+  </a>
+  
+    <nav class="md-nav" aria-label="ბიბლიოთეკის გამოქვეყნება">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-cli-application" class="md-nav__link">
+    Creating cli application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    დოკერი
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    სხვა რესურსები
+  </a>
+  
+    <nav class="md-nav" aria-label="სხვა რესურსები">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    არსებული რეპოზიტორიიდან დირექტორიის გატანა ისტორიით
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          04 other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          04 other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_other/04_guide/" class="md-nav__link">
+        ლექტორის გზამკვლევი
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commit-hooks" class="md-nav__link">
+    Commit hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Commit hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#githookspre-commit" class="md-nav__link">
+    .githooks/pre-commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#githooksprepare-commit-msg" class="md-nav__link">
+    .githooks/prepare-commit-msg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-hooks" class="md-nav__link">
+    setup hooks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-code-coverage" class="md-nav__link">
+    Adding code coverage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cicd" class="md-nav__link">
+    CI/CD
+  </a>
+  
+    <nav class="md-nav" aria-label="CI/CD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-on-pull-request" class="md-nav__link">
+    test on pull request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ლოკალურად გატესტვა
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ბიბლიოთეკის გამოქვეყნება
+  </a>
+  
+    <nav class="md-nav" aria-label="ბიბლიოთეკის გამოქვეყნება">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-cli-application" class="md-nav__link">
+    Creating cli application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    დოკერი
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    სხვა რესურსები
+  </a>
+  
+    <nav class="md-nav" aria-label="სხვა რესურსები">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    არსებული რეპოზიტორიიდან დირექტორიის გატანა ისტორიით
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="typescript">Typescript პროექტის გამართვა</h1>
+<h2 id="commit-hooks">Commit hooks</h2>
+<h3 id="githookspre-commit">.githooks/pre-commit</h3>
+<p>ეს სკრიპტი ამოწმებს ბრენჩის სახელის ვალიდურობას
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="nv">LC_ALL</span><span class="o">=</span>C
+
+<span class="nv">local_branch</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>git<span class="w"> </span>rev-parse<span class="w"> </span>--abbrev-ref<span class="w"> </span>HEAD<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nv">valid_branch_regex</span><span class="o">=</span><span class="s2">&quot;^[0-9]+\-(FEATURE|BUGFIX|IMPROVEMENT|HOTFIX|QA)\-[a-z0-9._-]+</span>$<span class="s2">&quot;</span>
+<span class="nv">branches_to_skip</span><span class="o">=</span><span class="s2">&quot;^(main|master|develop)</span>$<span class="s2">&quot;</span>
+<span class="nv">message</span><span class="o">=</span><span class="s2">&quot;Invalid branch name. Required: issueNumber-type-description.</span>
+<span class="s2">Your commit will be rejected.</span>
+<span class="s2">You should rename your branch to a valid name and try again.</span>
+<span class="s2">Types include [FEATURE|BUGFIX|IMPROVEMENT|HOTFIX|QA].</span>
+<span class="s2">If you would like to rename the current branch run git branch -m &lt;newName&gt;&quot;</span>.
+
+<span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>nocasematch
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span><span class="nv">$local_branch</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="nv">$valid_branch_regex</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span><span class="nv">$local_branch</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="nv">$branches_to_skip</span><span class="w"> </span><span class="o">]]</span>
+<span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$message</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+<span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div></p>
+<h3 id="githooksprepare-commit-msg">.githooks/prepare-commit-msg</h3>
+<p>ეს სკრიპტი კომიტის მესიჯის შეყვანის შემდეგ დასაწყისში მიუმატებს ბრენჩის ტიპს და ნომერს
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="c1"># Include any branches for which you wish to disable this script</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BRANCHES_TO_SKIP</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nv">BRANCHES_TO_SKIP</span><span class="o">=(</span>main<span class="w"> </span>master<span class="w"> </span>develop<span class="o">)</span>
+<span class="k">fi</span>
+<span class="c1"># Get the current branch name and check if it is excluded</span>
+<span class="nv">BRANCH_NAME</span><span class="o">=</span><span class="k">$(</span>git<span class="w"> </span>symbolic-ref<span class="w"> </span>--short<span class="w"> </span>HEAD<span class="k">)</span>
+
+<span class="c1"># Trim it down to get the parts we&#39;re interested in</span>
+<span class="nv">BRANCH_EXCLUDED</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;%s\n&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BRANCHES_TO_SKIP</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;^</span><span class="nv">$BRANCH_NAME</span>$<span class="s2">&quot;</span><span class="k">)</span>
+<span class="nv">TRIMMED</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$BRANCH_NAME</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s:^\([^-]*-[^-]*\)-.*:\1:&#39;</span><span class="w"> </span>-e<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/&#39;</span><span class="k">)</span>
+<span class="c1"># If it isn&#39;t excluded, preprend the trimmed branch identifier to the given message</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BRANCH_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w">  </span>!<span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$BRANCH_EXCLUDED</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>sed<span class="w"> </span>-i.bak<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;1s/^/</span><span class="nv">$TRIMMED</span><span class="s2"> /&quot;</span><span class="w"> </span><span class="nv">$1</span>
+<span class="k">fi</span>
+</code></pre></div></p>
+<h3 id="setup-hooks">setup hooks</h3>
+<p>git commit hook-ებს კითხულობს <code>.git</code> დირექტორიიდან და არა <code>.githooks/</code> დირექტორიიდან. ამიტომ, გუნდის წევრებმა რომ ჰუკები დაამატონ, საჭიროა კონფიგურაციის შეცვლა. ინდივიდუალურად რომ არ მოუწიოს ყველას გაკეთება, უმჯობესია სკტრიპტ ფაილი შევინახოთ და შემდეგ დავამატოთ <code>package.json</code>-ში. <code>postinstall</code> ბრძანება <code>yarn install</code>-ის შემდეგ ავტომატურად, ყველასთან გაეშვება
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;postinstall&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./scripts/post_install.sh&quot;</span><span class="p">,</span>
+</code></pre></div></p>
+<p><code>scripts/post_install.sh</code> 
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+
+git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>core.hooksPath<span class="w"> </span>.githooks/
+</code></pre></div></p>
+<h2 id="adding-code-coverage">Adding code coverage</h2>
+<p>Install libraries
+- For coverage: <a href="https://github.com/istanbuljs/nyc">https://github.com/istanbuljs/nyc</a>
+- For badges:<a href="https://github.com/olavoparno/istanbul-badges-readme">https://github.com/olavoparno/istanbul-badges-readme</a></p>
+<div class="highlight"><pre><span></span><code>yarn<span class="w"> </span>add<span class="w"> </span>--dev<span class="w"> </span>nyc<span class="w"> </span>istanbul-badges-readme
+</code></pre></div>
+<p>create scripts, add nyc settings</p>
+<p>თუ <code>README.md</code> სხვა დირექტორიაშია, <code>'make-badges'</code> ბრძანებაში ჩაამატე <code>--readmeDir="./my-custom-readme-directory"</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;coverage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nyc yarn test &amp;&amp; rm -r .nyc_output&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;make-badges&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;istanbul-badges-readme&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;nyc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;reporter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="s2">&quot;json-summary&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>დაამატე README.md-ში 
+<div class="highlight"><pre><span></span><code><span class="gu">### Coverage</span>
+![<span class="nt">Statements</span>](<span class="na">#statements#</span>)
+![<span class="nt">Branches</span>](<span class="na">#branches#</span>)
+![<span class="nt">Functions</span>](<span class="na">#functions#</span>)
+![<span class="nt">Lines</span>](<span class="na">#lines#</span>)
+</code></pre></div></p>
+<p>run
+<div class="highlight"><pre><span></span><code>yarn coverage
+yarn make-badges
+</code></pre></div></p>
+<h2 id="cicd">CI/CD</h2>
+<div class="highlight"><pre><span></span><code><span class="err">mkdir</span><span class="w"> </span><span class="mi">-</span><span class="err">p</span><span class="w"> </span><span class="err">.gi</span><span class="kc">t</span><span class="err">hub/work</span><span class="kc">fl</span><span class="err">ows</span>
+</code></pre></div>
+<h3 id="test-on-pull-request">test on pull request</h3>
+<p><code>.github/workflows/test-pull-request.yml</code></p>
+<p>Note: აუცილებელია, რომ პროექტში იყოს <code>yarn.lock</code></p>
+<div class="highlight"><pre><span></span><code><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="kc">test</span><span class="w"> </span><span class="err">pull</span><span class="w"> </span><span class="err">reques</span><span class="kc">t</span>
+
+<span class="err">o</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">pull</span><span class="mi">-</span><span class="err">reques</span><span class="kc">t</span>
+
+<span class="err">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="err">build</span><span class="p">:</span>
+<span class="w">    </span><span class="err">ru</span><span class="kc">ns</span><span class="mi">-</span><span class="err">o</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">ubu</span><span class="kc">ntu</span><span class="mi">-</span><span class="err">la</span><span class="kc">test</span>
+<span class="w">    </span><span class="err">s</span><span class="kc">te</span><span class="err">ps</span><span class="p">:</span>
+<span class="w">      </span><span class="mi">-</span><span class="w"> </span><span class="err">uses</span><span class="p">:</span><span class="w"> </span><span class="err">ac</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="err">/checkou</span><span class="kc">t</span><span class="err">@v</span><span class="mi">3</span>
+<span class="w">      </span><span class="mi">-</span><span class="w"> </span><span class="err">uses</span><span class="p">:</span><span class="w"> </span><span class="err">ac</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="err">/se</span><span class="kc">tu</span><span class="err">p</span><span class="mi">-</span><span class="kc">n</span><span class="err">ode@v</span><span class="mi">3</span>
+<span class="w">        </span><span class="err">wi</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span>
+<span class="w">          </span><span class="kc">n</span><span class="err">ode</span><span class="mi">-</span><span class="err">versio</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span>
+<span class="w">      </span><span class="mi">-</span><span class="w"> </span><span class="err">uses</span><span class="p">:</span><span class="w"> </span><span class="err">DerYeger/yar</span><span class="kc">n</span><span class="mi">-</span><span class="err">se</span><span class="kc">tu</span><span class="err">p</span><span class="mi">-</span><span class="err">ac</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">@v</span><span class="mf">1.0.1</span>
+<span class="w">        </span><span class="err">wi</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span>
+<span class="w">          </span><span class="kc">n</span><span class="err">ode</span><span class="mi">-</span><span class="err">versio</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span>
+<span class="w">      </span><span class="mi">-</span><span class="w"> </span><span class="err">ru</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">yar</span><span class="kc">n</span><span class="w"> </span><span class="err">i</span><span class="kc">nstall</span><span class="w"> </span><span class="mi">--</span><span class="kc">fr</span><span class="err">oze</span><span class="kc">n</span><span class="mi">-</span><span class="err">lock</span><span class="kc">f</span><span class="err">ile</span>
+<span class="w">      </span><span class="mi">-</span><span class="w"> </span><span class="err">ru</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">yar</span><span class="kc">n</span><span class="w"> </span><span class="kc">test</span>
+</code></pre></div>
+<h3 id="_1">ლოკალურად გატესტვა</h3>
+<p><a href="https://github.com/nektos/act">https://github.com/nektos/act</a></p>
+<h2 id="_2">ბიბლიოთეკის გამოქვეყნება</h2>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;files&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">    </span><span class="s2">&quot;src&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;lib&quot;</span>
+<span class="w">  </span><span class="o">]</span>,
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>gh<span class="w"> </span>release<span class="w"> </span>create<span class="w"> </span><span class="o">[</span>&lt;tag&gt;<span class="o">]</span>
+</code></pre></div>
+<h3 id="creating-cli-application">Creating cli application</h3>
+<p><code>$SCRIPT_FILE</code> აუცილებელია ჩანაცვლდეს მთავარი ფაილის სახელით</p>
+<p><code>package.json</code>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;bin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;$COMMAND_NAME&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$SCRIPT_FILE&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;build&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tsc &amp;&amp; chmod u+x bin/$SCRIPT_FILE&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="_3">დოკერი</h2>
+<div class="highlight"><pre><span></span><code>FROM<span class="w"> </span>node:latest
+
+WORKDIR<span class="w"> </span>/usr/src/app
+COPY<span class="w"> </span>yarn.lock<span class="w"> </span>./
+COPY<span class="w"> </span>package.json<span class="w"> </span>./
+RUN<span class="w"> </span>yarn<span class="w"> </span>install<span class="w"> </span>--frozen-lockfile
+COPY<span class="w"> </span>src<span class="w"> </span>./src
+COPY<span class="w"> </span>tsconfig.json<span class="w"> </span>./
+RUN<span class="w"> </span>yarn<span class="w"> </span>build
+
+ENTRYPOINT<span class="w"> </span><span class="o">[</span><span class="s2">&quot;yarn&quot;</span>,<span class="w"> </span><span class="s2">&quot;test-submission&quot;</span><span class="o">]</span>
+</code></pre></div>
+<h2 id="_4">სხვა რესურსები</h2>
+<h3 id="_5">არსებული რეპოზიტორიიდან დირექტორიის გატანა ისტორიით</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># MODULE_NAME იგულისხმება დირექტორიის სახელი</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$REPO_URL</span><span class="w"> </span><span class="nv">$MODULE_NAME</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$MODULE_NAME</span>
+git-filter-repo<span class="w"> </span>--path<span class="w"> </span><span class="nv">$MODULE_NAME</span><span class="w"> </span>--path-rename<span class="w"> </span><span class="nv">$MODULE_NAME</span>/:<span class="s1">&#39;&#39;</span>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      
+    
+  </body>
+</html>
